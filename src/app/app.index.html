@@ -1,0 +1,29 @@
+<div >
+    <table class="center">
+        <tr>
+          <td *ngFor="let art of arts" style="position: relative;">
+            <img [src]="art.src" (click)="onSelectImage(art.src, art.name, art.author, art.year, art.location)" width="180" height="130" style="margin: 5px;">
+            <!-- <p>{{ art.name }}</p> -->
+          </td>
+        </tr>
+    </table>
+    <h2 style="text-align: center;">Выбранное изображение:</h2>
+    <div class="center">
+      
+      <img [src]="selectedImageUrl" width="650" height="450" style="margin: 50px;" class="main-img">
+      <div>
+        <h1>{{ selectedTitle }}</h1>
+       <h3>{{selectedAuthor}}</h3>
+       <h3>{{selectedYear}} год</h3>
+       <h3>{{selectedLocation}}</h3>
+      </div>
+
+    </div>
+   
+     
+       
+    
+    
+
+</div>
+
